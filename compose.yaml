@@ -1,0 +1,29 @@
+services:
+  redis-stack-server:
+    image: redis/redis-stack-server:latest #由于本地我安装了redis inst，所以只装服务端
+    ports:
+      - "10001:6379" #本地装了个redis，防止端口冲突，故修改为 10001
+    volumes:
+      - redis-stack-data:/data
+      - redis-stack-config:/redis-stack.cof
+    networks:
+      redis-stack-net
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - "7473:7473"
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j-data:/data
+      - neo4j-plugins:/plugins
+    networks:
+      neo4j-net
+
+  volumes:
+    redis-stack-config
+    neo4j-net
+
+  networks:
+    redis-stack-net:
+      driver: bridge
