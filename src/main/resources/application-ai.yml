@@ -1,0 +1,7 @@
+# ******各AI厂商配置（含开源）等配置 *******
+
+## MySQL 数据源配置
+spring:
+  ai:
+    openai:
+      api-key:

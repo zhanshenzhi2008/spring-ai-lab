@@ -1,0 +1,55 @@
+# ******SQL、NOSQL数据源配置: 如mysql 、oracle、redis、mongoDB等 *******spring:
+
+## MySQL 数据源配置
+spring:
+  # springboot 2.7+ 版本使用下面这个初始化脚本
+  sql:
+    init:
+      mode: never # 第一次开启always，后面发包建议改为never,除非有新的脚本
+      schema-locations: classpath:db/*-ddl.sql #ddl sql
+      data-locations: classpath:db/*-dml.sql # dml sql
+  datasource:
+    #druid: # spring.datasource.druid.以下配置 和 spring.datasource.以下配置是一样的
+    #    db-type: com.alibaba.druid.pool.DruidDataSource
+    #    driver-class-name:
+    #    url:
+    #    username: root
+    #    password: root
+    # SpringBoot 2.7之前版本
+    #separator: ;
+    #data: classpath:config-data.sql
+    ##data-username: root
+    ##data-password:
+    #schema: classpath:config-schema.sql # schema必须也存在，若只存在data，data中的sql也不会被执行
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # &allowPublicKeyRetrieval=true是mysql8.10+版本的
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/knowledge_base?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true}
+    username: ${MYSQL_USR:root}
+    password: ${MYSQL_PWD:root810i} #5.7-》root     8.1.0 Innovation-》root810i
+    #type: com.alibaba.druid.pool.DruidDataSource
+
+
+  data:
+    redis:
+      database: 0
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:10001} #本人docker装了redis-stack端口是10001
+      timeout: 100000
+      username: ${REDIS_USR:}
+      password: ${REDIS_PWD:root}
+      client-type: lettuce
+
+    #jedis: # 改用lettuce
+      lettuce:
+        pool:
+          max-active: 4000
+          max-idle: 1000
+          max-wait: 30000
+          min-idle: 5
+          time-between-eviction-runs: 100000 #每ms运行一次空闲连接回收器（独立线程）
+
+  neo4j:
+    authentication:
+      username: ${REDIS_USR:neo4j}
+      password: ${REDIS_PWD:neo4j-root}
+    uri: bolt://localhost:7687
