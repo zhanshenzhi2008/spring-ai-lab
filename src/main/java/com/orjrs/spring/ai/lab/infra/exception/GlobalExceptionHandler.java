@@ -32,7 +32,7 @@ public class GlobalExceptionHandler<T> {
     @ResponseBody
     public ResponseResult<T> bizExceptionHandler(BizException e) {
         LOG.error("发生业务异常！原因是", e);
-        return ResponseResult.error(e.getErrorCode().toString(), e.getErrorMsg());
+        return ResponseResult.error(Integer.parseInt(e.getErrorCode().toString()), e.getErrorMsg());
     }
 
 
