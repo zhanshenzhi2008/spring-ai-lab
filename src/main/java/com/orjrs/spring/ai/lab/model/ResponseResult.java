@@ -1,5 +1,6 @@
 package com.orjrs.spring.ai.lab.model;
 
+import com.orjrs.spring.ai.lab.infra.enums.HubApiExceptionEnum;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -9,7 +10,7 @@ import java.io.Serial;
  * Controller返回结果
  *
  * @author orjrs
- * @date 2021-01-11 16:39
+ * {@code @date} 2024-10-21 16:39
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -75,7 +76,7 @@ public class ResponseResult<T> extends HubErrorResp {
      * @param exceptionEnum 异常
      * @return ResponseResult
      */
-    public static <T> ResponseResult<T> error(DmHubApiExceptionEnum exceptionEnum) {
+    public static <T> ResponseResult<T> error(HubApiExceptionEnum exceptionEnum) {
         ResponseResult<T> rb = new ResponseResult<>();
         rb.setCode(exceptionEnum.getCode());
         rb.setMsg(exceptionEnum.getMsg());
