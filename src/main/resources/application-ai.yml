@@ -3,5 +3,6 @@
 ## MySQL 数据源配置
 spring:
   ai:
+    # openai 需要在pom.xml中以来openai starter包
     openai:
       api-key:
