@@ -1,4 +1,4 @@
-package com.orjrs.spring.ai.lab.model;
+package com.orjrs.spring.ai.lab.model.common;
 
 import com.orjrs.spring.ai.lab.infra.enums.HubApiExceptionEnum;
 import lombok.Data;

@@ -1,1 +1,22 @@
 # ****** 持久层 *******
+jimmer:
+  dialect: org.babyfish.jimmer.sql.dialect.MySqlDialect
+  show-sql: true
+  pretty-sql: true
+ # inline-sql-variables: true #true：参数能够被内联到SQL语句中,否则，以 “? /* 参数 */”展示
+  executor-context-prefixes: #允许开发人员指定多个包或类前缀，jimmer将用它们过滤堆栈跟踪信息，如果某个调用帧能通过过滤，Jimmer就会认为它和用户业务相关，从而在执行前的回调参数中包含它。
+    - com.orjrs.spring.ai.lab
+  database-validation-mode: WARNING
+  client:
+    ts:
+      path: /ts.zip
+    openapi:
+      path: /openapi
+      ui-path: /openapi-ui
+      properties:
+        info:
+          title: ${spring.application.name} Open API
+          description: |
+            Restore the DTO explosion that was 
+            eliminated by server-side developers
+          version: 1.0

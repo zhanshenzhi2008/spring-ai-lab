@@ -1,0 +1,6 @@
+export com.orjrs.spring.ai.lab.model.message.AiMessage
+
+input AiMessageInput{
+    #allScalars(AiMessage)
+    id(session)
+}

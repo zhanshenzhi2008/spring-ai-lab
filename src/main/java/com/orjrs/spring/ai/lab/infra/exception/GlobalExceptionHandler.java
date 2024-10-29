@@ -2,12 +2,10 @@ package com.orjrs.spring.ai.lab.infra.exception;
 
 import com.orjrs.spring.ai.lab.infra.enums.HubApiExceptionEnum;
 import com.orjrs.spring.ai.lab.infra.enums.RunExceptionEnum;
-import com.orjrs.spring.ai.lab.model.ResponseResult;
+import com.orjrs.spring.ai.lab.model.common.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * 全局异常处理
  *
  * @author orjrs
- * @date 2024-10-11 18:29
+ * {@code @date} 2024-10-11 18:29
  */
 @ControllerAdvice
 public class GlobalExceptionHandler<T> {
@@ -34,7 +32,7 @@ public class GlobalExceptionHandler<T> {
     @ResponseBody
     public ResponseResult<T> bizExceptionHandler(BizException e) {
         LOG.error("发生业务异常！原因是", e);
-        return ResponseResult.error(Integer.parseInt(e.getErrorCode().toString()), e.getErrorMsg());
+        return ResponseResult.error(e.getErrorCode().toString(), e.getErrorMsg());
     }
 
 
