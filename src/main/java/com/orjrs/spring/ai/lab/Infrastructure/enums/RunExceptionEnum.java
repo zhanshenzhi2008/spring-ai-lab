@@ -1,7 +1,7 @@
-package com.orjrs.spring.ai.lab.infra.enums;
+package com.orjrs.spring.ai.lab.Infrastructure.enums;
 
 
-import com.orjrs.spring.ai.lab.infra.exception.ExceptionInfo;
+import com.orjrs.spring.ai.lab.Infrastructure.exception.ExceptionInfo;
 
 /**
  * 运行异常枚举类

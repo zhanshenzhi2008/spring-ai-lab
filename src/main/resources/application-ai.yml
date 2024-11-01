@@ -5,4 +5,9 @@ spring:
   ai:
     # openai 需要在pom.xml中以来openai starter包
     openai:
-      api-key:
+      api-key: ${OPENAI_API_KEY:sk-VZk8lv2eLgLpsgO39083D3D620Fe46179d8c6e032d33A699}
+      base-url: https://api.xty.app #官方：https://api.openai.com/
+      chat:
+        options:
+          model: gpt-3.5-turbo #gpt-3.5-turbo dall-e-3
+          temperature: 0.9

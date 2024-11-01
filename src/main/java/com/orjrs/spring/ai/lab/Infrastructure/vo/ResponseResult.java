@@ -1,6 +1,6 @@
-package com.orjrs.spring.ai.lab.model.common;
+package com.orjrs.spring.ai.lab.Infrastructure.vo;
 
-import com.orjrs.spring.ai.lab.infra.enums.HubApiExceptionEnum;
+import com.orjrs.spring.ai.lab.Infrastructure.enums.HubApiExceptionEnum;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

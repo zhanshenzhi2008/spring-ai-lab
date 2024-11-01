@@ -1,4 +1,4 @@
-package com.orjrs.spring.ai.lab.model.common;
+package com.orjrs.spring.ai.lab.Infrastructure.vo;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;

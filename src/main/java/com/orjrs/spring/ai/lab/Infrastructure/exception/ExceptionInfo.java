@@ -1,4 +1,4 @@
-package com.orjrs.spring.ai.lab.infra.exception;
+package com.orjrs.spring.ai.lab.Infrastructure.exception;
 
 
 /**

@@ -41,8 +41,12 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+       <!-- <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.ai</groupId>
@@ -52,6 +56,7 @@
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-neo4j-store-spring-boot-starter</artifactId>
         </dependency>
+        <!-- webflux 会直接报Unsatisfied dependency expressed through method 'openAiChatModel' parameter 2: No qualifying bean of type 'org.springframework.web.client.RestClient$Builder' available: expected at least 1 bean which qualifies as autowire candidate ，需要处理RestClient-->
         <!--<dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-ollama-spring-boot-starter</artifactId>

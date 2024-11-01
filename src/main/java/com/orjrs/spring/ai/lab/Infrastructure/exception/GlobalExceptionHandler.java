@@ -1,8 +1,8 @@
-package com.orjrs.spring.ai.lab.infra.exception;
+package com.orjrs.spring.ai.lab.Infrastructure.exception;
 
-import com.orjrs.spring.ai.lab.infra.enums.HubApiExceptionEnum;
-import com.orjrs.spring.ai.lab.infra.enums.RunExceptionEnum;
-import com.orjrs.spring.ai.lab.model.common.ResponseResult;
+import com.orjrs.spring.ai.lab.Infrastructure.enums.HubApiExceptionEnum;
+import com.orjrs.spring.ai.lab.Infrastructure.enums.RunExceptionEnum;
+import com.orjrs.spring.ai.lab.Infrastructure.vo.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
