@@ -23,9 +23,9 @@ spring:
     #schema: classpath:config-schema.sql # schema必须也存在，若只存在data，data中的sql也不会被执行
     driver-class-name: com.mysql.cj.jdbc.Driver
     # &allowPublicKeyRetrieval=true是mysql8.10+版本的
-    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/ai_lib?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true}
+    url: ${MYSQL_URL:jdbc:mysql://localhost:13306/ai_lib?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true}
     username: ${MYSQL_USR:root}
-    password: ${MYSQL_PWD:root810i} #5.7-》root     8.1.0 Innovation-》root810i
+    password: ${MYSQL_PWD:mysql-root} #5.7-》mysql15720     docker的 8-》mysql-root
     #type: com.alibaba.druid.pool.DruidDataSource
 
   data:

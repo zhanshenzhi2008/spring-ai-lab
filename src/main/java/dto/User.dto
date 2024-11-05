@@ -1,0 +1,10 @@
+export com.orjrs.spring.ai.lab.model.message.User
+
+input UserLoginInput{
+    phone
+    password
+}
+input UserRegisterInput{
+    phone
+    password
+}

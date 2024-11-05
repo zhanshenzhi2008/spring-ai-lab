@@ -20,9 +20,25 @@ services:
     networks:
       neo4j-net
 
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql-root #指定mysql环境变量，root用户的密码为123456. 方便以后忘了密码 去容器里echo打印环境变量出来
+    volumes:
+    # (this is just an example, not intended to be a production configuration)
+      - mysql-log: /var/log/mysql #映射日志目录，宿主机:容器
+      - mysql-data: /var/lib/mysql #映射数据目录，宿主机:容器
+      - mysql-conf: /etc/mysql #映射配置目录，宿主机:容器
+      - /etc/localtime: /etc/localtime:ro #让容器的时钟与宿主机时钟同步，避免时区的问题，ro是read only的意思，就是只读。
+
   volumes:
     redis-stack-config
     neo4j-net
+    mysql-log
+    mysql-data
+    mysql-conf
+    /etc/localtime
 
   networks:
     redis-stack-net:

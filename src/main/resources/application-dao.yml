@@ -7,6 +7,7 @@ jimmer:
   executor-context-prefixes: #允许开发人员指定多个包或类前缀，jimmer将用它们过滤堆栈跟踪信息，如果某个调用帧能通过过滤，Jimmer就会认为它和用户业务相关，从而在执行前的回调参数中包含它。
     - com.orjrs.spring.ai.lab
   database-validation-mode: WARNING
+
   client:
     ts:
       path: /ts.zip

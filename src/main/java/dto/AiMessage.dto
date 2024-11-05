@@ -1,4 +1,4 @@
-export com.orjrs.spring.ai.lab.model.message.AiMessage
+export com.orjrs.spring.ai.lab.domain.message.entity.AiMessage
 
 input AiMessageInput{
     #allScalars(AiMessage)
