@@ -12,8 +12,8 @@ CREATE TABLE `ai_message` (
                               `medias` json DEFAULT NULL COMMENT '媒体内容如图片链接、语音链接',
                               `ai_session_id` varchar(32) NOT NULL COMMENT '会话id',
                               `creator_id` varchar(32) NOT NULL COMMENT '创建人ID',
-                              `modifier_id` varchar(32) NOT NULL COMMENT '更新人ID',
                               `created_time` datetime(6) NOT NULL COMMENT '创建时间',
+                              `modifier_id` varchar(32) NOT NULL COMMENT '更新人ID',
                               `modified_time` datetime(6) NOT NULL COMMENT '更新时间',
                               PRIMARY KEY (`id`),
                               KEY `idx_ai_message_ai_session_id` (`ai_session_id`)
@@ -44,8 +44,8 @@ CREATE TABLE `ai_session` (
                               `id` varchar(36) NOT NULL COMMENT '主键',
                               `name` varchar(32) NOT NULL COMMENT '会话名称',
                               `creator_id` varchar(32) NOT NULL COMMENT '创建人ID',
-                              `modifier_id` varchar(32) NOT NULL COMMENT '更新人ID',
                               `created_time` datetime(6) NOT NULL COMMENT '创建时间',
+                              `modifier_id` varchar(32) NOT NULL COMMENT '更新人ID',
                               `modified_time` datetime(6) NOT NULL COMMENT '更新时间',
                               PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT = 'AI会话表';
@@ -77,9 +77,9 @@ CREATE TABLE `user` (
                         `gender` varchar(36) DEFAULT NULL COMMENT '性别',
                         `phone` varchar(20) NOT NULL COMMENT '电话',
                         `password` varchar(100) NOT NULL COMMENT '密码',
-                        `modifier_id` varchar(32) NOT NULL COMMENT '创建人ID',
-                        `updater_id` varchar(32) NOT NULL COMMENT '更新人ID',
+                        -- `creator_id` varchar(32) NOT NULL COMMENT '创建人ID',
                         `created_time` datetime(6) NOT NULL COMMENT '创建时间',
+                        -- `modifier_id` varchar(32) NOT NULL COMMENT '更新人ID',
                         `modified_time` datetime(6) NOT NULL COMMENT '更新时间',
                         PRIMARY KEY (`id`),
                         UNIQUE KEY `uniq_idx_phone` (`phone`)

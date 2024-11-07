@@ -1,11 +1,9 @@
 package com.orjrs.spring.ai.lab.domain.user.entity;
 
 import com.orjrs.spring.ai.lab.Infrastructure.jimmer.BaseDateTime;
+import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
-import org.babyfish.jimmer.sql.Entity;
-import org.babyfish.jimmer.sql.GeneratedValue;
-import org.babyfish.jimmer.sql.Id;
-import org.babyfish.jimmer.sql.Key;
+import org.babyfish.jimmer.sql.*;
 import org.babyfish.jimmer.sql.meta.UUIDIdGenerator;
 
 /**
@@ -15,6 +13,7 @@ import org.babyfish.jimmer.sql.meta.UUIDIdGenerator;
  * {@code @date} 2024-11-05 21:01
  */
 @Entity
+@Table(name = "ai_lib.user")
 public interface User extends BaseDateTime {
     @Id
     @GeneratedValue(generatorType = UUIDIdGenerator.class)
@@ -38,12 +37,12 @@ public interface User extends BaseDateTime {
     /** 性别  */
     @Nullable
     String gender();
-
-    /** 创建人ID  */
-    @Nullable
-    String creatorId();
-
-    /** 更新人ID*/
-    @Nullable
-    String modifierId();
+//
+//    /** 创建人ID  */
+//    @Nonnull
+//    String creatorId();
+//
+//    /** 更新人ID*/
+//    @Nonnull
+//    String modifierId();
 }
