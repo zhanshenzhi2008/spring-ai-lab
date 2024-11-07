@@ -86,7 +86,7 @@
 
         <dependency>
             <groupId>org.babyfish.jimmer</groupId>
-            <artifactId>jimmer-spring-boot-starter</artifactId>.3
+            <artifactId>jimmer-spring-boot-starter</artifactId>
             <version>${jimmer.version}</version>
         </dependency>
        <!-- <dependency>
