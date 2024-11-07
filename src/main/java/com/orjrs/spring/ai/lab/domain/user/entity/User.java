@@ -32,10 +32,18 @@ public interface User extends BaseDateTime {
     String avatar();
 
     /** 昵称  */
-    @Null
+    @Nullable
     String nickname();
 
     /** 性别  */
-    @Null
+    @Nullable
     String gender();
+
+    /** 创建人ID  */
+    @Nullable
+    String creatorId();
+
+    /** 更新人ID*/
+    @Nullable
+    String modifierId();
 }

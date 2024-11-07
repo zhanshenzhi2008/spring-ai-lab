@@ -16,5 +16,5 @@ public interface BaseDateTime {
   LocalDateTime createdTime();
 
   /** 修改时间 */
-  LocalDateTime updatedTime();
+  LocalDateTime modifiedTime();
 }

@@ -14,7 +14,8 @@ import java.time.LocalDateTime;
  */
 @MappedSuperclass
 public interface BaseEntity extends BaseDateTime {
-   /** 主键 */
+
+    /** 主键 */
     @Id
     @GeneratedValue(generatorType = UUIDIdGenerator.class)
     String id();

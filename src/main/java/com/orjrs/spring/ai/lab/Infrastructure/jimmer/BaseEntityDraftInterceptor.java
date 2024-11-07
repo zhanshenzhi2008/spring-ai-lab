@@ -19,7 +19,7 @@ public class BaseEntityDraftInterceptor implements DraftInterceptor<BaseEntity, 
 
   @Override
   public void beforeSave(@NotNull BaseEntityDraft draft, BaseEntity baseEntity) {
-    draft.applyEditor(user -> {
+    draft.applyModifier(user -> {
       user.setId(StpUtil.getLoginIdAsString());
     });
     if (baseEntity == null) {
