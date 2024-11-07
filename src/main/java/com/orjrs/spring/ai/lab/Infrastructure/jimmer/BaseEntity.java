@@ -1,6 +1,7 @@
 package com.orjrs.spring.ai.lab.Infrastructure.jimmer;
 
 import com.orjrs.spring.ai.lab.domain.user.entity.User;
+import jakarta.annotation.Nullable;
 import org.babyfish.jimmer.sql.*;
 import org.babyfish.jimmer.sql.meta.UUIDIdGenerator;
 
@@ -23,10 +24,10 @@ public interface BaseEntity extends BaseDateTime {
     /** 创建者 */
     @ManyToOne
     @OnDissociate(DissociateAction.DELETE)
-    User creator();
+    @Nullable    User creator();
 
     /** 更新者 */
     @ManyToOne
     @OnDissociate(DissociateAction.DELETE)
-    User modifier();
+    @Nullable    User modifier();
 }

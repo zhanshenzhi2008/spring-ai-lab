@@ -7,8 +7,9 @@ jimmer:
   executor-context-prefixes: #允许开发人员指定多个包或类前缀，jimmer将用它们过滤堆栈跟踪信息，如果某个调用帧能通过过滤，Jimmer就会认为它和用户业务相关，从而在执行前的回调参数中包含它。
     - com.orjrs.spring.ai.lab
   database-validation:
-    mode: ERROR
+    mode: NONE # NONE|WARNING|ERROR  #如果开启校验 多对1或多对多等要很严格，代码很可能错
     schema: ai_lib # 连接到的数据库名/模式名
+#  isForeignKeyEnabledByDefault: false
 
   client:
     ts:
@@ -23,3 +24,4 @@ jimmer:
             Restore the DTO explosion that was 
             eliminated by server-side developers
           version: 1.0
+
