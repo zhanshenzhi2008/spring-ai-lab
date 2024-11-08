@@ -1,6 +1,0 @@
-export com.orjrs.spring.ai.lab.model.message.AiSession
-
-input AiSessionInput{
-    id?
-    name
-}

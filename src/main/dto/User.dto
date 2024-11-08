@@ -1,4 +1,4 @@
-export com.orjrs.spring.ai.lab.model.message.User
+export com.orjrs.spring.ai.lab.domain.user.entity.User
 
 input UserLoginInput{
     phone

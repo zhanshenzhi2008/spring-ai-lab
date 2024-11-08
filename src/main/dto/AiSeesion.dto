@@ -1,0 +1,6 @@
+export com.orjrs.spring.ai.lab.domain.session.entity.AiSession
+
+input AiSessionInput{
+    id?
+    name
+}
