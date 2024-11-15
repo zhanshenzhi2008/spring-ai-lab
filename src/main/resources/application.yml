@@ -1,10 +1,13 @@
+server:
+    port: 19001
 spring:
     application:
         name: spring-ai-lab
     # 加载application-XX.yml配置，其中XX就是以下include属性值
     profiles: # 分别为：服务发现、DB(含NoSql)、持久层、消息中间件
-        include: ai,db,dao #,message,${KERBEROS_YML:''}
+        include: ai,sa,db,dao #,message,${KERBEROS_YML:''}
         active: ${PROFILES_ACTIVE:}
     main:
         allow-circular-references: true #允许循环依赖
         #allow-bean-definition-overriding: true
+

@@ -35,7 +35,7 @@
         <spring-ai-alibaba.version>1.0.0-M3.1</spring-ai-alibaba.version>
         <jimmer.version>0.9.4</jimmer.version>
         <hutool.version>5.8.25</hutool.version>
-        <sa-token.version>1.37.0</sa-token.version>
+        <sa-token.version>1.39.0</sa-token.version>
     </properties>
     <dependencies>
         <dependency>
@@ -89,25 +89,17 @@
             <artifactId>jimmer-spring-boot-starter</artifactId>
             <version>${jimmer.version}</version>
         </dependency>
-       <!-- <dependency>
-            <groupId>org.babyfish.jimmer</groupId>
-            &lt;!&ndash; 用户编写的实体代码所需的依赖 &ndash;&gt;
-            <artifactId>jimmer-core</artifactId>
-            <version>${jimmer.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.babyfish.jimmer</groupId>
-            &lt;!&ndash; 生成的代码所需的依赖 &ndash;&gt;
-            <artifactId>jimmer-sql</artifactId>
-            <version>${jimmer.version}</version>
-            &lt;!&ndash;其他项目必然导入包含此依赖&ndash;&gt;
-            <scope>provided</scope>
-        </dependency>-->
+        <!-- 如果你使用的是 SpringBoot 3.x，只需要将 sa-token-spring-boot-starter 修改为 sa-token-spring-boot3-starter 即可。 -->
         <dependency>
             <groupId>cn.dev33</groupId>
             <artifactId>sa-token-redis-jackson</artifactId>
             <version>${sa-token.version}</version>
         </dependency>
+        <!-- 提供Redis连接池 这里没必要引入了 其他的依赖已经有了-->
+        <!--<dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>-->
         <dependency>
             <groupId>cn.dev33</groupId>
             <artifactId>sa-token-spring-boot3-starter</artifactId>
@@ -212,6 +204,7 @@
                 <enabled>false</enabled>
             </releases>
         </repository>
+
         <repository>
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2/</url>
@@ -221,6 +214,14 @@
             <releases>
                 <enabled>true</enabled>
             </releases>
+        </repository>
+        <repository>
+            <id>tencent</id>
+            <name>tencent maven</name>
+            <url>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </repository>
     </repositories>
 

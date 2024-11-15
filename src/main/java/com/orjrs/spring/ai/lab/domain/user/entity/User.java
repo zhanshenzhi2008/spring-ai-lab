@@ -1,10 +1,9 @@
 package com.orjrs.spring.ai.lab.domain.user.entity;
 
 import com.orjrs.spring.ai.lab.Infrastructure.jimmer.BaseDateTime;
-import jakarta.annotation.Nonnull;
+import com.orjrs.spring.ai.lab.Infrastructure.jimmer.UUIDIdGenerator;
 import jakarta.annotation.Nullable;
 import org.babyfish.jimmer.sql.*;
-import org.babyfish.jimmer.sql.meta.UUIDIdGenerator;
 
 /**
  * 用户信息
