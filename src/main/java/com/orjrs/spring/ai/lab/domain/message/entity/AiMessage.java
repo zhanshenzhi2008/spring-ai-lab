@@ -11,7 +11,7 @@ import org.springframework.ai.chat.messages.MessageType;
 import java.util.List;
 
 /**
- * 历史消息
+ * AI消息
  *
  * @author orjrs
  * {@code @date} 2024-11-05 21:01

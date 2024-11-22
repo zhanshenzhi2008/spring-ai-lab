@@ -52,9 +52,3 @@ spring:
       username: ${REDIS_USR:neo4j}
       password: ${REDIS_PWD:neo4j-root}
     uri: bolt://localhost:7687
-#  ai:
-#    vectorstore:
-#      redis:
-#        prefix:
-#        index:
-#        #uri:

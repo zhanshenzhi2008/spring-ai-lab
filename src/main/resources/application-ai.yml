@@ -23,3 +23,6 @@ spring:
       image:
         options:
           model: wanx-v1
+    vectorstore:
+      redis:
+        initialize-schema: true
