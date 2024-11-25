@@ -19,7 +19,6 @@ import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.image.ImageModel;
 import org.springframework.ai.image.ImagePrompt;
 import org.springframework.ai.model.Media;
-import org.springframework.ai.reader.tika.TikaDocumentReader;
 import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.context.ApplicationContext;
